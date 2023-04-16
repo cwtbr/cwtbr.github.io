@@ -16,15 +16,15 @@
   <meta name="author" content="wt chen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="未完待续……">
+    <meta name="description" content="hexo官方文档 https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F; 安装git安装 Node.js （建议安装  v16.19.1版本）安装Hexo 全局安装  &#x3D;&#x3D;npm install -g hexo-cli&#x3D;&#x3D; （这样的好处就是可以不用配置环境变量，当然这是在你的Node.js配置号环境变量的前提下） 局部安装  先创建一个文件夹用来放置 hex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo搭建Github page">
 <meta property="og:url" content="http://example.com/2023/04/14/blog-build-record/index.html">
 <meta property="og:site_name" content="浅试洽谈">
-<meta property="og:description" content="未完待续……">
+<meta property="og:description" content="hexo官方文档 https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F; 安装git安装 Node.js （建议安装  v16.19.1版本）安装Hexo 全局安装  &#x3D;&#x3D;npm install -g hexo-cli&#x3D;&#x3D; （这样的好处就是可以不用配置环境变量，当然这是在你的Node.js配置号环境变量的前提下） 局部安装  先创建一个文件夹用来放置 hex">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-14T11:47:42.000Z">
-<meta property="article:modified_time" content="2023-04-15T05:29:07.207Z">
+<meta property="article:modified_time" content="2023-04-16T16:43:17.438Z">
 <meta property="article:author" content="wt chen">
 <meta property="article:tag" content="博客搭建">
 <meta name="twitter:card" content="summary_large_image">
@@ -237,7 +237,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          6 字
+          2.6k 字
         
       </span>
     
@@ -248,7 +248,7 @@
         
         
         
-          1 分钟
+          22 分钟
         
       </span>
     
@@ -291,8 +291,70 @@
             
               <div class="markdown-body">
                 
-                <p>未完待续……</p>
+                <p>hexo官方文档 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></p>
+<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><h2 id="安装-Node-js-（建议安装-v16-19-1版本）"><a href="#安装-Node-js-（建议安装-v16-19-1版本）" class="headerlink" title="安装 Node.js （建议安装  v16.19.1版本）"></a>安装 Node.js （建议安装  v16.19.1版本）</h2><h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><ol>
+<li>全局安装  &#x3D;&#x3D;npm install -g hexo-cli&#x3D;&#x3D; （这样的好处就是可以不用配置环境变量，当然这是在你的Node.js配置号环境变量的前提下）</li>
+<li>局部安装 <ol>
+<li>先创建一个文件夹用来放置 hexo 包 （如果不创建，Hexo 默认在目前的文件夹建立网站。）</li>
+<li>在该文件夹下执行 &#x3D;&#x3D;npm install hexo&#x3D;&#x3D;  等下载完毕，该文件夹下会有一个叫 hexo 的文件夹</li>
+<li>再将 hexo 文件夹中的 node_modules 中的 .bin 文件夹的 路径添加到环境变量中</li>
+</ol>
+</li>
+</ol>
+<h2 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h2><ol>
+<li><p>创建一个新的文件夹。比如 blog</p>
+</li>
+<li><p>在父文件夹进入终端并执行命令 hexo init blog</p>
+</li>
+<li><p>在终端 执行 cd blog  ，进入 blog 文件夹后 执行 npm install 安装依赖</p>
+</li>
+<li><p>新建完成后，指定文件夹的目录如下：</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs 1c">.<br>├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── source<br><span class="hljs-string">|   ├</span><br><span class="hljs-string">|   └── _posts</span><br>└── themes<br></code></pre></td></tr></table></figure>
 
+<h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>网站的 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，您可以在此配置大部分的参数。</p>
+<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><p>应用程序的信息。<a target="_blank" rel="noopener" href="https://ejs.co/">EJS</a>, <a target="_blank" rel="noopener" href="http://learnboost.github.io/stylus/">Stylus</a> 和 <a target="_blank" rel="noopener" href="http://daringfireball.net/projects/markdown/">Markdown</a> renderer 已默认安装，您可以自由移除。</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs actionscript"><span class="hljs-keyword">package</span>.json&#123;<br>  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;hexo-site&quot;</span>,<br>  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.0.0&quot;</span>,<br>  <span class="hljs-string">&quot;private&quot;</span>: <span class="hljs-literal">true</span>,<br>  <span class="hljs-string">&quot;hexo&quot;</span>: &#123;<br>    <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;&quot;</span><br>  &#125;,<br>  <span class="hljs-string">&quot;dependencies&quot;</span>: &#123;<br>    <span class="hljs-string">&quot;hexo&quot;</span>: <span class="hljs-string">&quot;^3.8.0&quot;</span>,<br>    <span class="hljs-string">&quot;hexo-generator-archive&quot;</span>: <span class="hljs-string">&quot;^0.1.5&quot;</span>,<br>    <span class="hljs-string">&quot;hexo-generator-category&quot;</span>: <span class="hljs-string">&quot;^0.1.3&quot;</span>,<br>    <span class="hljs-string">&quot;hexo-generator-index&quot;</span>: <span class="hljs-string">&quot;^0.2.1&quot;</span>,<br>    <span class="hljs-string">&quot;hexo-generator-tag&quot;</span>: <span class="hljs-string">&quot;^0.2.0&quot;</span>,<br>    <span class="hljs-string">&quot;hexo-renderer-ejs&quot;</span>: <span class="hljs-string">&quot;^0.3.1&quot;</span>,<br>    <span class="hljs-string">&quot;hexo-renderer-stylus&quot;</span>: <span class="hljs-string">&quot;^0.3.3&quot;</span>,<br>    <span class="hljs-string">&quot;hexo-renderer-marked&quot;</span>: <span class="hljs-string">&quot;^0.3.2&quot;</span>,<br>    <span class="hljs-string">&quot;hexo-server&quot;</span>: <span class="hljs-string">&quot;^0.3.3&quot;</span><br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h3><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/writing#%E6%A8%A1%E7%89%88%EF%BC%88Scaffold%EF%BC%89">模版</a> 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</p>
+<p>Hexo的模板是指在新建的文章文件中默认填充的内容。例如，如果您修改scaffold&#x2F;post.md中的Front-matter内容，那么每次新建一篇文章时都会包含这个修改。</p>
+<h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><p>资源文件夹是存放用户资源的地方。除 <code>_posts</code> 文件夹之外，开头命名为 <code>_</code> (下划线)的文件 &#x2F; 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 <code>public</code> 文件夹，而其他文件会被拷贝过去。</p>
+<h3 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h3><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/themes">主题</a> 文件夹。Hexo 会根据主题来生成静态页面。</p>
+</li>
+</ol>
+<h2 id="配置博客-建议官方文档"><a href="#配置博客-建议官方文档" class="headerlink" title="配置博客 建议官方文档"></a>配置博客 建议<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">官方文档</a></h2><h2 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">基本命令</a></h2><h2 id="部署到-GitHub-page"><a href="#部署到-GitHub-page" class="headerlink" title="部署到 GitHub page"></a>部署到 GitHub page</h2><ul>
+<li><p>建立名为 <code>&lt;你的 GitHub 用户名&gt;.github.io</code> 的储存库 （免费版只允许仓库为 public）</p>
+</li>
+<li><p>进入 github settings 生成 token ，<strong>期间不需要勾选任何选项</strong></p>
+</li>
+<li><p>安装 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a>。</p>
+</li>
+<li><p>在 <code>_config.yml</code> 中添加以下配置（如果配置已经存在，请将其替换为如下）:</p>
+</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>  <span class="hljs-attr">repo:</span> <span class="hljs-string">https://github.com/&lt;username&gt;/&lt;project&gt;</span>   <span class="hljs-comment"># 这里要是你刚刚创建的仓库</span><br>  <span class="hljs-comment"># example, https://github.com/hexojs/hexojs.github.io</span><br>  <span class="hljs-attr">branch:</span> <span class="hljs-string">main</span>  <span class="hljs-comment"># 你想要上传到仓库的分支</span><br>  <span class="hljs-attr">token:</span>        <span class="hljs-comment"># 这里是你刚刚生成的 token</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>执行 <code>hexo clean &amp;&amp; hexo deploy</code> 。（首次执行 hexo deploy 会弹出一个窗口让你登录GitHub授权，选择浏览器登录即可。刚刚生成的 token 并没有登录的权限）</li>
+<li>浏览 <code>&lt;GitHub 用户名&gt;.github.io</code> 检查你的网站能否运作。</li>
+</ul>
+<h2 id="安装Fluid主题"><a href="#安装Fluid主题" class="headerlink" title="安装Fluid主题"></a>安装Fluid主题</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm install --save hexo-theme-fluid<br></code></pre></td></tr></table></figure>
+
+<p>然后在博客目录下创建 <code>_config.fluid.yml</code>，然后进入 博客根目录中的 node_modules 文件夹找到 hexo-theme-fluid 文件夹并进入将其中的_config.yml中的内容复制过去。</p>
+<h2 id="Hexo配置Fluid主题"><a href="#Hexo配置Fluid主题" class="headerlink" title="Hexo配置Fluid主题"></a>Hexo配置Fluid主题</h2><h3 id="指定主题"><a href="#指定主题" class="headerlink" title="指定主题"></a>指定主题</h3><p>如下修改 Hexo 博客目录中的 <code>_config.yml</code>：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">theme:</span> <span class="hljs-string">fluid</span>  <span class="hljs-comment"># 指定主题</span><br><br><span class="hljs-attr">language:</span> <span class="hljs-string">zh-CN</span>  <span class="hljs-comment"># 指定语言，会影响主题显示的语言，按需修改</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="创建「关于页」"><a href="#创建「关于页」" class="headerlink" title="创建「关于页」"></a>创建「关于页」</h3><p>首次使用主题的「关于页」需要手动创建：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new page about<br></code></pre></td></tr></table></figure>
+
+<p>创建成功后修改 <code>/source/about/index.md</code>，添加 <code>layout</code> 属性。</p>
+<p>修改后的文件示例如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">标题</span><br><span class="hljs-attr">layout:</span> <span class="hljs-string">about</span><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br><span class="hljs-string">这里写关于页的正文，支持</span> <span class="hljs-string">Markdown,</span> <span class="hljs-string">HTML</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>WARNING：<code>layout: about</code> 必须存在，并且不能修改成其他值，否则不会显示头像等样式。</p>
+</blockquote>
+<p>到这里 Hexo已配置成 fluid 主题，接下来具体的配置请查看 <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/#%E8%A6%86%E7%9B%96%E9%85%8D%E7%BD%AE">官方文档</a></p>
+<h2 id="未完待续……"><a href="#未完待续……" class="headerlink" title="未完待续……"></a>未完待续……</h2>
                 
               </div>
             
@@ -381,6 +443,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2023/04/17/hexo-actions/" title="hexo-actions">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">hexo-actions</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
