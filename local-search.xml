@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>vant安装依赖后报错</title>
+    <link href="/2023/04/17/vant%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E5%90%8E%E6%8A%A5%E9%94%99/"/>
+    <url>/2023/04/17/vant%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E5%90%8E%E6%8A%A5%E9%94%99/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>“Internal server error: Failed to resolve import… from “src\plugins\vant.ts”. Does the file exist”</p></blockquote><p>在使用vant组件库时，初始化项目后，使用 npm install 安装依赖后启动项目就报一下错误</p><img src="/2023/04/17/vant%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E5%90%8E%E6%8A%A5%E9%94%99/1.png" class=""><p>根据错误提示可以发现，是由于找不到文件产生的异常，并且它需要找的是vant的一些东西。经测试，发现在项目的node_modules文件夹下有一个叫vant的文件夹，将其中es文件夹中的所有样式引入就不再报错。在项目根目录找到 vite.config.ts 文件并配置一下内容。</p><figure class="highlight tsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs tsx"><span class="hljs-keyword">import</span> &#123; defineConfig &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;vite&#x27;</span><br><span class="hljs-keyword">import</span> vue <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@vitejs/plugin-vue&#x27;</span><br><span class="hljs-keyword">import</span> styleImport, &#123;<span class="hljs-title class_">VantResolve</span>&#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;vite-plugin-style-import&#x27;</span>;<br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title function_">defineConfig</span>(&#123;<br>    <span class="hljs-attr">base</span>: <span class="hljs-string">&quot;./&quot;</span>, <span class="hljs-comment">//等同于  assetsPublicPath :&#x27;./&#x27;</span><br>    <span class="hljs-attr">plugins</span>: [<br>        <span class="hljs-title function_">vue</span>(),<br>        <span class="hljs-title function_">styleImport</span>(&#123;<br>            <span class="hljs-attr">resolves</span>: [<span class="hljs-title class_">VantResolve</span>()],<br>            <span class="hljs-attr">libs</span>: [<br>                &#123;<br>                    <span class="hljs-attr">libraryName</span>: <span class="hljs-string">&#x27;vant&#x27;</span>,<br>                    <span class="hljs-attr">esModule</span>: <span class="hljs-literal">true</span>,<br>                    <span class="hljs-comment">//将vant的所有样式引入</span><br>                    <span class="hljs-attr">resolveStyle</span>: <span class="hljs-function">(<span class="hljs-params">name</span>) =&gt;</span> <span class="hljs-string">`../es/<span class="hljs-subst">$&#123;name&#125;</span>/style`</span><br>                &#125;<br>            ]<br>        &#125;),<br>    ],<br>    <span class="hljs-attr">server</span>: &#123;<br>        <span class="hljs-attr">host</span>: <span class="hljs-string">&quot;0.0.0.0&quot;</span>,<br>        <span class="hljs-attr">port</span>:<span class="hljs-number">3001</span>,<span class="hljs-comment">//指定端口</span><br>    &#125;,<br>&#125;);<br></code></pre></td></tr></table></figure><p>配置完成后，项目就可以正常运行了。</p><img src="/2023/04/17/vant%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E5%90%8E%E6%8A%A5%E9%94%99/2.png" class="">]]></content>
+    
+    
+    <categories>
+      
+      <category>problems</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vant依赖报错</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>hexo-actions</title>
     <link href="/2023/04/17/hexo-actions/"/>
     <url>/2023/04/17/hexo-actions/</url>
