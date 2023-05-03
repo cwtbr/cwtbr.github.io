@@ -1,1 +1,0 @@
-var posts=["2023/04/14/Hexo搭建Github page/","2023/04/17/vant安装依赖后报错/","2023/04/17/hexo-基本命令/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
